@@ -9,31 +9,31 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
-	private  String id;
-	private  String  passWord;
-	private  String  e_mail;
+	private  int id;
+	private  String  password;
+	private  String  Email;
 	
 	
-	
-	public String getId() {
-		return id;
-	}
 	@Id
 	@GeneratedValue
-	public void setId(String id) {
+	public int getId() {
+		return id;
+	}
+ 
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getPassWord() {
-		return passWord;
+		return password;
 	}
 	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+		this.password = passWord;
 	}
 	public String getE_mail() {
-		return e_mail;
+		return Email;
 	}
 	public void setE_mail(String e_mail) {
-		this.e_mail = e_mail;
+		this.Email = e_mail;
 	}
 	
 	
