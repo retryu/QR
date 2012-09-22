@@ -29,12 +29,6 @@
     <property name="hbm2ddl.auto">update</property>
       
       
-      <mapping class="com.model.Room" />
-       <mapping class="com.model.Order" />
-       <mapping class="com.model.User" />  
-        <mapping class="com.model.Member" /> 
-   	 <mapping resource="com/model/Activity.hbm.xml"/> 
-         <mapping resource="com/model/Serve.hbm.xml"/> 
     
   </session-factory>
 </hibernate-configuration>

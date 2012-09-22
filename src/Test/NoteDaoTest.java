@@ -16,7 +16,7 @@ public class NoteDaoTest {
 	
 	static  SessionFactory  sessionFactory;
 		static NoteDaoImpl  noteDaoImpl;
-		@BeforeClass
+	@BeforeClass
 	public  static void  prepareSession(){
 		sessionFactory=HibernateUtil.getSessionFactory();
 		noteDaoImpl=new NoteDaoImpl();

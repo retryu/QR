@@ -17,93 +17,45 @@
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
     </listener>
-	
-		<servlet>
-		<servlet-name>ManageServlet</servlet-name>
-		 <servlet-class>com.servelet.ServletManager</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		  <servlet-name>ManageServlet</servlet-name>
-        <url-pattern>/ManageServlet</url-pattern>
-    </servlet-mapping>
-	
-	<servlet>
-		<servlet-name>RoomServlet</servlet-name>
-		 <servlet-class>com.servelet.RoomServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		  <servlet-name>RoomServlet</servlet-name>
-        <url-pattern>/room</url-pattern>
-    </servlet-mapping>
-	
-	
-	
-	
-		<servlet>
-		<servlet-name>registMember</servlet-name>
-		 <servlet-class>com.servelet.registMember</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		  <servlet-name>registMember</servlet-name>
-        <url-pattern>/registMember</url-pattern>
-    </servlet-mapping>
-	
-		<servlet>
-		<servlet-name>refershServlet</servlet-name>
-		 <servlet-class>com.servelet.RefershServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		  <servlet-name>refershServlet</servlet-name>
-        <url-pattern>/refershServlet</url-pattern>
-    </servlet-mapping>
-	
-	<servlet>
-		<servlet-name>serveManager</servlet-name>
-		 <servlet-class>com.servelet.ServeManager</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		  <servlet-name>serveManager</servlet-name>
-        <url-pattern>/serveManager</url-pattern>
-    </servlet-mapping>
+    
+    <servlet>  
+    <servlet-name>chapter2</servlet-name>  
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
+    <load-on-startup>1</load-on-startup>  
+</servlet>  
+<servlet-mapping>  
+    <servlet-name>chapter2</servlet-name>  
+    <url-pattern>*.do</url-pattern>  
+</servlet-mapping>  
     
     
-    	
-	<servlet>
-		<servlet-name>dictionaryServlet</servlet-name>
-		 <servlet-class>com.servelet.DictionaryServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		  <servlet-name>dictionaryServlet</servlet-name>
-        <url-pattern>/dictionaryServlet</url-pattern>
-    </servlet-mapping>
-        
-    	
+    
+    
+    
+    
+	
+	 <filter>  
+    <filter-name>CharacterEncodingFilter</filter-name>  
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+    <init-param>  
+        <param-name>encoding</param-name>  
+        <param-value>utf-8</param-value>  
+    </init-param>  
+</filter>  
+<filter-mapping>  
+    <filter-name>CharacterEncodingFilter</filter-name>  
+    <url-pattern>/*</url-pattern>  
+</filter-mapping>  
+	
+	
+	
+	
+	
+		 
+	
  
     
-    
-	
-	
-	
-	
-<servlet>
-  <display-name>DWR Servlet</display-name>
-  <servlet-name>dwr-invoker</servlet-name>
-  <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
-  <init-param>
-    <param-name>activeReverseAjaxEnabled</param-name>
-    <param-value>true</param-value>
-  </init-param>
-  <init-param>
-     <param-name>debug</param-name>
-     <param-value>true</param-value>
-  </init-param>
-</servlet>
-<servlet-mapping>
-  <servlet-name>dwr-invoker</servlet-name>
-  <url-pattern>/dwr/*</url-pattern>
-</servlet-mapping>
-	
-	
+ 
 	
 	
 	   
@@ -111,7 +63,7 @@
 	     
     <welcome-file-list>
 				<welcome-file>
-           /login.jsp
+           /upload.jsp
         </welcome-file>
     </welcome-file-list>
     

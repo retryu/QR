@@ -9,3 +9,4 @@ public interface NoteDao {
 	public  Note  findByid(int id);
 
 }
+  

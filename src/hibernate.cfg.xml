@@ -32,6 +32,7 @@
     <property name="hbm2ddl.auto">update</property>
       
       <mapping class="com.model.User" />
+        <mapping class="com.model.Note" />
    
     
   </session-factory>

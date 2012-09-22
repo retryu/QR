@@ -24,9 +24,6 @@
   
   
   
-  <bean  id="roomDao"  class="com.Dao.Impl.RoomDaoImp"></bean>
-   <bean  id="memberDao"  class="com.Dao.Impl.MemberDaoImpl"></bean>
-    <bean  id="orderDao"  class="com.Dao.Impl.OrderDaoImpl"></bean>
   <bean
        id="sessionFactory" 
        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
@@ -48,35 +45,14 @@
      </bean>
 	 
 	 
-	 <bean  id="DBUtil"  class="com.DB.DBUtil">
-	  	<property  name="sf">
-	 		<ref  local="sessionFactory"/>
-	 	</property>   
-	</bean> 	
-	<bean  id="DBinsert"  class="com.DB.DBinsert">
-			<property  name="sf">
-				<ref  local="sessionFactory"/>
-			</property>
+	 	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+		<!-- one of the properties available; the maximum file size in bytes -->
 	</bean>
-	
-	
-	<bean  id="DBdelete"  class="com.DB.DBdelete">
-		<property name="sf">
-			<ref  local="sessionFactory"/>
-		</property>
+		<bean  id="NoteService"  class="com.web.service.NoteService"></bean>
 		
-	</bean>
-	
-	<bean  id="DBupdate"  class="com.DB.DBupdate">
-		<property name="sf">
-			<ref  local="sessionFactory"/>
-		</property>
-		
-	</bean>
-		
-		
-	 
-	 
+ 
 	 
      
      	 
