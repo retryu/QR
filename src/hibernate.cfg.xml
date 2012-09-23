@@ -33,6 +33,7 @@
       
       <mapping class="com.model.User" />
         <mapping class="com.model.Note" />
+         <mapping class="com.model.Resource" />
    
     
   </session-factory>

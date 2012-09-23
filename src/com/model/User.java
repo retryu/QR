@@ -35,6 +35,29 @@ public class User {
 	public void setE_mail(String e_mail) {
 		this.Email = e_mail;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getEmail() {
+		return Email;
+	}
+
+	public void setEmail(String email) {
+		Email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", password=" + password + ", Email=" + Email
+				+ "]";
+	}
+	
 	
 	
 	

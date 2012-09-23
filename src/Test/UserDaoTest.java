@@ -6,8 +6,8 @@ import org.hibernate.SessionFactory;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.Dao.impl.UserDaoImpl;
 import com.Util.HibernateUtil;
+import com.dao.impl.UserDaoImpl;
 import com.model.User;
 
 
@@ -36,17 +36,18 @@ public class UserDaoTest {
 			User  u=userDaoImpl.findById(1);
 			userDaoImpl.deleteUser(u);
 		}
-		public  User findUser(){
+		@Test
+		public  void findtUser(){
 			User user=userDaoImpl.findById(2);
-			return  user;
+			System.out.print(user);
 		}
 		
-		@Test
-		public void updateUser(){
-			User u=findUser();
-			u.setE_mail("shbanyun@163.com");
-			userDaoImpl.updateUser(u);
-		}
+//		@Test
+//		public void updateUser(){
+//			User u=findUser();
+//			u.setE_mail("shbanyun@163.com");
+//			userDaoImpl.updateUser(u);
+//		}
 		
 		
 		

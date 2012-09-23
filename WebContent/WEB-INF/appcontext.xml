@@ -16,10 +16,14 @@
 	 
   <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
     <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-    <property name="url" value="jdbc:mysql://localhost:3306/hibernate"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/qr"/>
     <property name="username" value="root"/>
     <property name="password" value="1234"/>
   </bean>
+    
+    
+    <bean  id="noteDaoImple"  class="com.dao.impl.NoteDaoImpl"></bean>
+       <bean  id="resourceDaoImpl"  class="com.dao.impl.ResourceDaoImpl"></bean>
     
   
   
@@ -50,7 +54,7 @@
 
 		<!-- one of the properties available; the maximum file size in bytes -->
 	</bean>
-		<bean  id="NoteService"  class="com.web.service.NoteService"></bean>
+		<bean  id="ResourceService"  class="com.web.service.ResourceService"></bean>
 		
  
 	 
