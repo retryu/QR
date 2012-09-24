@@ -1,0 +1,56 @@
+.div_note{
+	background-color:#07A4D7;
+	width: 94%;
+	position: absolute;
+	top:700px;
+	margin-left:3%;
+	margin-right:3%;
+	padding-bottom:100px;
+	display: none;
+	
+	}
+.flow_title{
+	height:60px;
+	width: 100%;
+	background-color: #046c8e;
+		}
+.flow_title p{
+	margin: 0px;
+	padding-left:100px;
+	line-height: 60px;
+	color:white;
+	font-size: 35px;
+	}
+.flow_content{
+	margin-top:50px;
+	width: 100%;
+	background-color: #046c8e;
+	}
+.flow_content p{
+	text-align:center;
+	margin: 0px;
+	padding: 0px;
+	line-height: 60px;
+	color:white;
+	font-size: 30px;
+	}
+	#add_btn{
+	
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	bottom: 0px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	}
+	.action_btn{
+	position: fixed;
+	bottom: 0px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	}
+	.action_btn  img{
+	}
+	
+	
+
