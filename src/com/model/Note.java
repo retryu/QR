@@ -1,28 +1,20 @@
 package com.model;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.FetchMode;
 
 @Entity
 public class Note {
+
 	private  int id;
-	private String source;
-	private String  usl;
-	private Date  date;
-	private double  longitude;
-	private double  latitude;
-	private  Set<Resource> resources=new HashSet<Resource>();
+	private  String  type;
+	private  String  content;
+	private  int  wall_id;
+	private  String  note_title;
 	
 	@Id
 	@GeneratedValue
@@ -32,54 +24,39 @@ public class Note {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getSource() {
-		return source;
+	public String getType() {
+		return type;
 	}
-	public void setSource(String source) {
-		this.source = source;
+	public void setType(String type) {
+		this.type = type;
 	}
-	public String getUsl() {
-		return usl;
+	public String getContent() {
+		return content;
 	}
-	public void setUsl(String usl) {
-		this.usl = usl;
+	public void setContent(String content) {
+		this.content = content;
 	}
-	public Date getDate() {
-		return date;
+	public int getWall_id() {
+		return wall_id;
 	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public double getLongitude() {
-		return longitude;
-	}
-	public void setLongitude(double longitude) {
-		this.longitude = longitude;
-	}
-	public double getLatitude() {
-		return latitude;
-	}
-	public void setLatitude(double latitude) {
-		this.latitude = latitude;
+	public void setWall_id(int note_id) {
+		this.wall_id = note_id;
 	}
 	
-	@OneToMany(mappedBy="note_id",cascade={CascadeType.ALL},fetch=FetchType.EAGER)
-	public Set<Resource> getResources() {
-		return resources;
+	public String getNote_title() {
+		return note_title;
 	}
-	public void setResources(Set<Resource> resources) {
-		this.resources = resources;
+	public void setNote_title(String note_title) {
+		this.note_title = note_title;
 	}
 	@Override
 	public String toString() {
-		return "Note [id=" + id + ", source=" + source + ", usl=" + usl
-				+ ", date=" + date + ", longitude=" + longitude + ", latitude="
-				+ latitude + ", resources=" + resources + "]";
+		return "Note [id=" + id + ", type=" + type + ", content=" + content
+				+ ", wall_id=" + wall_id + "]";
 	}
+ 
 	
 	
 	
 	
-	
-
 }

@@ -9,28 +9,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.web.service.ResourceService;
+import com.web.service.NoteService;
 
 @Controller
 public class FileUploadController {
 	
 	
-	@Resource(name="ResourceService")
-	private ResourceService  noteService;
+	@Resource(name="noteService")
+	private NoteService  noteService;
  
 	
 	@RequestMapping(value="/upload2.do")
 	public void  handleFormUpload(@RequestParam("name") String name){
 		System.out.print("name:"+name);
-		
+		 
 	}      
-	
 		@RequestMapping(value="/upload.do",method=RequestMethod.POST)
 		public ModelAndView  handleFormUpload(@RequestParam("name") String name, @RequestParam("file")  MultipartFile  file){
 			ModelAndView m=new  ModelAndView();
   
 			if(noteService!=null)
-			noteService.addNote(file,30);
+			noteService.addImgNote(file,30);
 			else{
 				m.addObject("msg", "  noteservice  is null");
 				m.setViewName("error");
@@ -38,6 +37,11 @@ public class FileUploadController {
 			}
 			return  m;
 		}
+//		@RequestMapping(value="/addNote.do")
+//		public  void  handleAddNote(@RequestParam("note_content")String  note_content){
+//			
+//			
+//		}
 	  
 	
 

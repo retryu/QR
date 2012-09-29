@@ -22,8 +22,8 @@
   </bean>
     
     
-    <bean  id="noteDaoImple"  class="com.dao.impl.NoteDaoImpl"></bean>
-       <bean  id="resourceDaoImpl"  class="com.dao.impl.ResourceDaoImpl"></bean>
+    <bean  id="noteDaoImpl"  class="com.dao.impl.NoteDaoImpl"></bean>
+       <bean  id="wallDaoImpl"  class="com.dao.impl.WallDaoImpl"></bean>
     
   
   
@@ -54,7 +54,7 @@
 
 		<!-- one of the properties available; the maximum file size in bytes -->
 	</bean>
-		<bean  id="ResourceService"  class="com.web.service.ResourceService"></bean>
+		<bean  id="noteService"  class="com.web.service.NoteService"></bean>
 		
  
 	 

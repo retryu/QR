@@ -75,7 +75,7 @@
 	     
     <welcome-file-list>
 				<welcome-file>
-           /login.jsp
+           /info.html
         </welcome-file>
     </welcome-file-list>
     

@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/info.css" />
 <link rel="stylesheet" type="text/css" href="css/note.css" />
 <script type="text/javascript"  src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript"  src="js/jquery_rotate.js"></script>
 <script type="text/javascript"  src="js/info.js"></script>
 </head>
 <body>
@@ -69,17 +70,43 @@
 		</div>
 		
 		<div   id="note_content" class="div_note">
-				<div  class="flow_title">
+				<div   class="note_title">
 				<p>互联网产品经理入门</p>
 				</div>
 				
-				<div class="flow_content">
-					<p>在表现层（surface），你看到的是一系列的网页，有图片和文字组成。一些图片是可以点 击的，从而执行某种功能，例如把你带到购物车里去。一些图片就只是图片，比如一本书的封  面或网站自己的标志。 </p>
+				<div class="note_content">
+					<p>  例如把你带到购物车里去。一些图片就只是图片，比如一本书的封  面或网站自己的标志。 </p>
 				</div>
+		</div>
+			 
 		
-			
+		
+		
+     <!--   	<div id="001"  class="div_add_note">
+		<form id="form_note"  action="addNote.do" method="post"> 
+		<div  class="div_add_note_title">
+		<textarea class="textarea_add_note_title" rows="1" cols="10"></textarea>
+		</div>
+		<div  class="div_add_note_content">
+		<textarea name="note_content" class="textarea_add_note"rows="10" cols="20">
+		</textarea>
+		</form>
 		</div>
 		
+		<div  class="div_add_note_commit_btn">
+			<div id="note_submit" type="button"  >
+			<p>提交</p>
+			</div>
+		</div>
+		</div> -->
+		
+		 
+		
+		
+		
+		
+		
+ 
 		<div class="action_btn"  > 
 		<img   src="./img/text_icon.png">
 		</div>
@@ -88,11 +115,15 @@
 		</div>
 		<div class="action_btn"  > 
 		<img   src="./img/img_icon.png">
+		<input id='file_upload' type="file"  >
 		</div>
 		<div id="add_btn"  > 
 		<img  src="./img/add_btn.png">
+		 
 		</div>
 	 
+	 
+	 <div  class="footer"></div>
 	 
 	 
 	 

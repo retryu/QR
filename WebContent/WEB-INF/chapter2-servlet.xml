@@ -46,5 +46,5 @@ class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 -->
  
   <bean  class="com.web.controller.FileUploadController"></bean>
- 	
+   <bean  class="com.web.controller.NoteController"></bean>
 </beans>

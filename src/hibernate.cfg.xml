@@ -31,9 +31,9 @@
     <!-- Drop and re-create the database schema on startup-->  
     <property name="hbm2ddl.auto">update</property>
       
-      <mapping class="com.model.User" />
-        <mapping class="com.model.Note" />
-         <mapping class="com.model.Resource" />
+        <mapping class="com.model.User" />
+       <mapping class="com.model.Note" />
+         <mapping class="com.model.Wall" />
    
     
   </session-factory>

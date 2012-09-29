@@ -1,56 +1,170 @@
-.div_note{
-	background-color:#07A4D7;
+.div_note {
+	background-color: #07A4D7;
 	width: 94%;
-	position: absolute;
-	top:700px;
-	margin-left:3%;
-	margin-right:3%;
-	padding-bottom:100px;
-	display: none;
-	
-	}
-.flow_title{
-	height:60px;
+	float: left;
+	margin-left: 3%;
+	margin-right: 3%;
+	display: block;
+	margin-top: 2%;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+.note_title {
+	height: 60px;
 	width: 100%;
 	background-color: #046c8e;
-		}
-.flow_title p{
+}
+
+.note_title p {
 	margin: 0px;
-	padding-left:100px;
+	padding-left: 100px;
 	line-height: 60px;
-	color:white;
+	color: white;
 	font-size: 35px;
-	}
-.flow_content{
-	margin-top:50px;
+}
+
+.note_content {
+	margin-top: 50px;
 	width: 100%;
 	background-color: #046c8e;
-	}
-.flow_content p{
-	text-align:center;
+}
+
+.note_content p {
+	text-align: center;
 	margin: 0px;
 	padding: 0px;
 	line-height: 60px;
-	color:white;
+	color: white;
 	font-size: 30px;
-	}
-	#add_btn{
-	
-	width: 100px;
-	height: 100px;
-	position: fixed;
-	bottom: 0px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	}
-	.action_btn{
-	position: fixed;
-	bottom: 0px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	}
-	.action_btn  img{
-	}
-	
-	
+}
 
+#add_btn {
+	width: 120px;
+	height: 120px;
+	position: fixed;
+	margin-left: 30px;
+	bottom: 0px;
+	margin-bottom: 10px;
+}
+
+#add_btn  img {
+	width: 120px;
+	height: 120px;
+}
+
+.action_btn {
+	position: fixed;
+	margin: 0px;
+	padding-left: 30px;
+	bottom: 0px;
+	width: 130px;
+	height: 120px;
+	margin-bottom: 10px;
+}
+
+.action_btn  img {
+	position: fixed;
+	margin: 0px;
+	padding: 0px;
+	width: 120px;
+	height: 120px;
+}
+
+.action_btn  input {
+	position: fixed;
+	background-image: url("./img/music_icon.png");
+	filter: alpha(opacity : 0);
+	opacity: 0.0;
+	margin: 0px;
+	padding: 0px;
+	width: 120px;
+	height: 120px;
+}
+
+.div_add_note {
+	margin-top: 2%;
+	margin-left: 3%;
+	margin-right: 3%;
+	float: left;
+	width: 94%;
+	height: 350px;
+	background-color: white;
+}
+
+.div_add_note_title {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #02B8E6;
+	text-align: center;
+}
+
+.div_add_note_title p {
+	margin: 0px;
+	text-align: center;
+	font-size: 40px;
+	color: white;
+	height: 15%;
+}
+
+.div_add_note_content {
+	width: 100%;
+	height: 200px;
+	background: #f5f2e0;
+	float: left;
+}
+
+.div_add_note_commit_btn {
+	float: left;
+	width: 100%;
+	height: 100px;
+	background-color: #f5f2e0;
+}
+
+#note_submit {
+	margin-right: 10%;
+	float: right;
+	width: 150px;
+	height: 80px;
+	color: white;
+	font-size: 35px;
+	background-color: #264d5a;
+	text-align: center;
+}
+
+#note_submit p {
+	line-height: 80px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.textarea_add_note {
+	width: 100%;
+	height: 200px;
+	color: #595959;
+	background: #f5f2e0;
+	font-size: 50px;
+	border-color: #f5f2e0;
+}
+
+.textarea_add_note_title {
+	margin: 0px;
+	text-align: center;
+	width:200px;
+	margin-right:auto;
+	margin-left:auto;
+	font-size: 40px;
+	color: white;
+	background-color:#02B8E6;
+	height: 50px;
+}
+
+.footer {
+	float: left;
+	width: 100%;
+	height: 300px;
+	background-color: white;
+}

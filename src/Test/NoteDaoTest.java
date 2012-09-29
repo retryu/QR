@@ -7,47 +7,50 @@ import java.util.Set;
 import org.hibernate.SessionFactory;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 import com.Util.HibernateUtil;
 import com.dao.impl.NoteDaoImpl;
+import com.dao.impl.WallDaoImpl;
 import com.model.Note;
-import com.model.Resource;
+import com.model.Wall;
 
 
 public class NoteDaoTest {
 	
 	static  SessionFactory  sessionFactory;
-		static NoteDaoImpl  noteDaoImpl;
+		static WallDaoImpl  wallDaoImpl;
+		static  NoteDaoImpl  noteDaoImpl;
 	@BeforeClass
 	public  static void  prepareSession(){
 		sessionFactory=HibernateUtil.getSessionFactory();
+		wallDaoImpl=new WallDaoImpl();
 		noteDaoImpl=new NoteDaoImpl();
+		wallDaoImpl.sessionFactory=sessionFactory;
 		noteDaoImpl.sessionFactory=sessionFactory;
 	}
 		
 		@Test
 		public  void TestAddNote(){
-			Resource resource=new Resource();
+			Note resource=new Note();
 			resource.setId(16);
 			resource.setContent("H:\\pic\\c.jpeg");
-			Set<Resource> resources=new  HashSet<Resource>();
+			Set<Note> resources=new  HashSet<Note>();
 			resources.add(resource);
 			
-			Note n=noteDaoImpl.findByid(25);
+			Wall n=wallDaoImpl.findByid(25);
 //			resource.setNote(n);
 			n.setDate(new Date());
 			n.setLatitude(12.33);
 			n.setLongitude(1.00098);
 			n.setResources(resources);
 			n.setUsl("https://fancyNote.com/Hsad123");
-			noteDaoImpl.add(n);
+			wallDaoImpl.add(n);
 			
 			
 		}
 		@Test
 		public  void TestGet(){
-			Note note=noteDaoImpl.findByid(30);
+			Wall note=wallDaoImpl.findByid(30);
 
 				System.out.print(note);
 			
@@ -55,17 +58,28 @@ public class NoteDaoTest {
 		}
 		@Test
 		public   void  TestUpdate(){
-			Note note=noteDaoImpl.findByid(30);
+			Wall note=wallDaoImpl.findByid(30);
  
 			note.setLongitude(44);
 //			noteDaoImpl.update(note);
 			System.out.print(note);
 		}
 		@Test
-		public   void  TestAdd(){
-			Note  note=noteDaoImpl.findByid(33);
-			noteDaoImpl.delete(note);
+		public   void  TestAddWall(){
+			Wall  wall=new  Wall();
+			 wallDaoImpl.add(wall);
+			 System.out.println("wall_id"+wall);
 		}
+		@Test 
+		public  void  TestAddNote2(){
+			Note  note=new  Note();
+		Wall  wall=new  Wall();
+			 wallDaoImpl.add(wall);
+			 
+			 note.setWall_id(wall.getId());
+			 note.setContent("asdasdas");
+			noteDaoImpl.add(note);
+			}
 		
 		
 	

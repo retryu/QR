@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	float: left;
 	width: 100%;
+	height: 150%;
 }
 
 .banner {
@@ -88,8 +89,8 @@ body {
 	 
 }
 .div_login{
-	position:absolute;
-	top:250px;
+	float:left;
+	margin-top:5%;
 	float:left;
 	width: 100%;
 	height: 400px;
@@ -200,7 +201,12 @@ body {
  font-size: 40px;
   border:0px;
  background-color:#05ae65;
+ 
  }
+ 
+ 
+ 
+ 
  
  
 
