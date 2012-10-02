@@ -47,11 +47,25 @@ function  touchend(event){
 //		 expanded=true;
 	return ;
 }
+
+
+function  onPropertyChange(){
+	alert("PropertyChange");
+}
+
+function   note(title,content){
+	this.title=title;
+	this.content=content;
+}
+
 function  init(){
 	var browser=navigator.appName;
 	var b_version=navigator.appVersion;
 	var version=parseFloat(b_version);
 //	alert('browser:'+browser+ "  version:"+3);
+	
+	
+	
 	
 	
 	
@@ -110,6 +124,62 @@ function  init(){
 	var text_position=w_width/2-120;
 	var  music_potion=text_position-200;
 	var  img_position=text_position+200;
+	
+	/*
+	 * 选择完上传图片后  提交表单
+	 */
+	img_btn.change(function(){
+		var  imgfile=document.getElementById("imgFile").files[0];
+		var  reader =new  FileReader();
+		reader.onload=function(e){
+			display($('#imgNote'), e.target.result);
+		}
+		reader.readAsDataURL(imgfile);
+		
+		
+		
+		
+//		$('#uploadImgForm').ajaxForm( {
+//			uploadProgress:function(event,position,total,percentComplete){
+//			 $("#process").attr({value:position,max:total});
+//		 }
+//		});
+//		 
+//		$('#uploadImgForm').submit();
+		
+//failed  with   html5   not  familiar with  HTTP
+//var  s=document.getElementById("imgFile").files[0];
+//		var  formDate=new  FormData(s);
+//		 $.ajax({
+//			 url:"addImgNote.do",
+//			 type:"POST",
+//			 data:$('#uploadImgForm').formSerialize()
+//			 });
+
+//		var  file=$('#imgFile').files[0];
+//		var name=file.name;
+//		var  size=file.size;
+//		var  type=file.type;
+//		alert("name"+naem+" size:"+size+"   type"+type);
+		
+		
+		
+//		$('#uploadImgForm').submit();
+//		$.post("addImgNote.do",
+//				$('#uploadImgForm').serialize(),
+//				function(){
+//			alert("uploadfinish");
+//		});
+		
+	});
+	function progressHandlingFunction(e){
+	    if(e.lengthComputable){
+	    	
+//	        $('progress').attr({value:e.loaded,max:e.total});
+	    }
+	}
+	
+	
  
 	add_btn.bind('click',function(){
 		text_btn.css('position','absolute');
@@ -117,7 +187,6 @@ function  init(){
 		img_btn.css('position','absolute');
 		
 		if(expanded==true){
-		 
 			 $(this).rotate({animateTo:45});
 			 expand_action_btn(text_position,music_potion,img_position);
 	 
@@ -131,17 +200,19 @@ function  init(){
  
 	text_btn.bind('click',function(){
 		var  last_note=$('.div_note:last');
-		$('<div id="001"  class="div_add_note">'+
+		$(
+		'<div id="001"  class="div_add_note">'+
+		'<form id="form_note"  action="addTextNote.do" method="post">' +
 		'<div  class="div_add_note_title">'+
-		'<form id="form_note"  action="addNote.do" method="post">' +
-		'<textarea id="noteTitle" class="textarea_add_note_title" rows="1" cols="10"></textarea>'+
+		 '<input  type="text" style="display:none" name="wallId"  value="3">'+
+		'<textarea name="noteTitle" class="textarea_add_note_title" rows="1" cols="10"></textarea>'+
 		'</div>'+
 		'<div  class="div_add_note_content">'+
 		'<textarea name="noteContent" class="textarea_add_note"rows="10" cols="20">'+
 		'</textarea>'+
-		'</form>'+
 		'</div>'+
 		'<div  class="div_add_note_commit_btn">'+
+		'</form>'+
 		'<div id="note_submit" type="button"  >'+
 		'<p>提交</p>'+
 		'</div>'+
@@ -161,19 +232,23 @@ function  init(){
 }
 
 
-function generateNote (){
+function generateNote (note){
+	alert(note.title+''+note.content);
 	
 	var  div_add_note=$('.div_add_note');
 	div_add_note.removeClass();
 	div_add_note.addClass('div_note');
 	var  add_note_title=$('.div_add_note_title');
-	
+	 
 	add_note_title.removeClass();
 	add_note_title.addClass('note_title');
 	var  last_div_note=$('.div_note:last');
+	
+	last_div_note.find('.note_title').html('<p>'+note.title+"</p>");
+	
 	$('.div_add_note_content').remove();
 	$('<div class="note_content">'+
-			'<p>'+'在表现层（surface），你看到的是一系列的网页，有图片'+'</p>'+
+			'<p>'+note.content+'</p>'+
 		'</div>'	
 	).insertAfter(last_div_note.find('.note_title'));
 	last_div_note.find('.div_add_note_commit_btn').remove();
@@ -185,15 +260,17 @@ function  add_note_dialog(){
 	var  add_not_submit=$('#note_submit');
 	var  form_note=$('#form_note');
 	add_not_submit.bind('click',function(){
+		alert("click  ssubmit");
 		var  text=$('.textarea_add_note').val();
  
 		$.post('addNote.do',
 				form_note.serialize(),
 				function(data,status){
-			var  notes=eval("("+data+")");
+			var  noteJson=eval("("+data+")");
 			
 			var  s=status;
-			generateNote();
+			var  n=new  note(noteJson.note_title,noteJson.content);
+			generateNote(n);
 		});
 	});
 }
@@ -243,6 +320,14 @@ function init_scroll(){
 //			add_btn.rotate({animateTo:0});
 //		}
 		});
+}
+function display(container,dataURL){
+	alert("diaplay");
+//	alert("dataURL:"+dataURL);
+	var  img=$('<img  src='+dataURL+'>');
+	img.insertBefore("#imgNote  progress");
+	
+	
 }
 
 

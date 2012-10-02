@@ -25,26 +25,30 @@ public class NoteService {
 	NoteDao  NoteDao;
 	
 	
-	public  void  addTextNote(int  wallId,String  text){
+	public  Note  addTextNote(int  wallId,String  noteTitle,String  noteText){
 		Wall  wall=wallDao.findByid(wallId);
 		if(wall==null){
 		wall=wallDao.add(new  Wall());
 		}
 		Note  note =new  Note();
 		note.setWall_id(wall.getId());
-		note.setContent(text);
+		note.setNote_title(noteTitle);
+		note.setContent(noteText);
 		NoteDao.add(note);
+		return  note;
 	 
 	}
 	
 	
-	public  void addImgNote(MultipartFile  file,int  id){
+	public  void addImgNote(MultipartFile  file,int  wallId){
 		try{
 		Note  note=new  Note();
 
 		String filePath="H:\\pic\\"+file.getOriginalFilename();
 		note.setType(file.getContentType());
-		note.setWall_id(id);
+		note.setWall_id(wallId);
+		note.setContent(filePath);
+		
 		NoteDao.add(note);
 		 
 		FileUtil.InputStream2File(file.getInputStream(), filePath);
@@ -53,7 +57,7 @@ public class NoteService {
 			e.printStackTrace();
 		}
 	}
-	public ArrayList<Note> getResoueces(int id){
+	public ArrayList<Note> getNotes(int id){
 		ArrayList<Note> resources=new  ArrayList<Note>();
 		resources=NoteDao.findByHQL("from  Note  where  wall_id="+id);
 		return  resources;

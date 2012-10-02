@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <form method="post" action="upload.do" enctype="multipart/form-data" >
-            <input type="text" value="hahs" name="name"/>
-            <input type="file" name="file"/>
-            <input type="submit"/>
+    <form method="post" action="addImgNote.do" enctype="multipart/form-data" >
+            <input type="text" value="hahs" name="noteTitle"/>
+            <input type="file" name="img"/>
+            <input id="upload" type="submit"/>
         </form>
 </body>
 </html>

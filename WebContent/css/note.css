@@ -10,6 +10,11 @@
 	padding-bottom: 0px;
 	padding-top: 0px;
 }
+.div_note  img{
+	width:30%;
+	padding: 3%;
+	
+}	
 
 .note_title {
 	height: 60px;
@@ -151,6 +156,10 @@
 }
 
 .textarea_add_note_title {
+	border-left:0px;
+	border-top:0px;
+	border-right:0px;
+	
 	margin: 0px;
 	text-align: center;
 	width:200px;

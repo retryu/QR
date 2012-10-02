@@ -1,14 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<p> 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/info.css" />
 <link rel="stylesheet" type="text/css" href="css/note.css" />
 <script type="text/javascript"  src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript"  src="js/jquery_rotate.js"></script>
 <script type="text/javascript"  src="js/info.js"></script>
-<script type="text/javascript"  src="js/jquery-form.js"></script>
 </head>
 <body>
 
@@ -24,8 +26,7 @@
     		</div>
     	</div>
     	<div class="div_banner_lable">
-    	<label class="banner_lable">获得你的标签吧</label>
-    	 
+    	<label class="banner_lable">获得你的标签吧 </p></label>
     	 </div>
     </div>
  
@@ -73,24 +74,36 @@
 		
 		<div   id="note_content" class="div_note">
 				<div   class="note_title">
-				 
 				<p>互联网产品经理入门</p>
 				</div>
 				
 				<div class="note_content">
-					<p>  例如把你带到购物车里去。一些图片就只是图片，比如一本书的封  面或网站自己的标志。 </p>
+					<p>  刺猬型的人非常敏感，随时都保持警惕，只要一感觉受到威胁，便会用豪猪般的刺扎向对手，让人避之不及。他们通常自我封闭，坚守自己的地盘，处处表现出来自己是对的，虽然其实他自己也并没有底气。他不会让别人看到自己的脆弱。</p>
 				</div>
 		</div>
 			 
+			 
+		<c:forEach   items="${notes}"  var="note">
+			<div   id="note_content" class="div_note">
+				<div   class="note_title">
+				<p>互联网产品经理入门</p>
+				</div>
+				
+				<div class="note_content">
+					<p>${note.content} </p>
+				</div>
+		</div>
+		
+		</c:forEach>
 		
 		
 		
-     <!--   	<div id="001"  class="div_add_note">
-		<form id="form_note"  action="addNote.do" method="post"> 
+      <!--    	<div id="001"  class="div_add_note">
 		<div  class="div_add_note_title">
-		<textarea class="textarea_add_note_title" rows="1" cols="10"></textarea>
+		<p>添加便签</p>
 		</div>
 		<div  class="div_add_note_content">
+		<form id="form_note"  action="addNote.do" method="post"> 
 		<textarea name="note_content" class="textarea_add_note"rows="10" cols="20">
 		</textarea>
 		</form>
@@ -101,15 +114,14 @@
 			<p>提交</p>
 			</div>
 		</div>
-		</div> -->
-		
-		 
-		<div  id="imgNote"  class="div_note">
-		<progress id="process" value="70" max="100">50%</progress>
 		</div>
-		
+		 -->
 		
 		 
+		
+		
+		
+		
 		
  
 		<div class="action_btn"  > 
@@ -120,11 +132,8 @@
 		</div>
 		<div class="action_btn"  > 
 		<img   src="./img/img_icon.png">
-		<form id="uploadImgForm" action="addImgNote.do" method="post" enctype="multipart/form-data"> 
-		<input id='wallId' type="txxt"  value="3"  name="noteTitle">
-		<input id='imgFile' type="file" name="img" >
+		<input id='file_upload' type="file"  >
 		</div>
-		</form>
 		<div id="add_btn"  > 
 		<img  src="./img/add_btn.png">
 		 
@@ -133,8 +142,3 @@
 	 
 	 <div  class="footer"></div>
 	 
-	 
-	 
- 
-</body>
-</html>

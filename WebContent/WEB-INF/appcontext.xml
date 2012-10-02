@@ -55,7 +55,7 @@
 		<!-- one of the properties available; the maximum file size in bytes -->
 	</bean>
 		<bean  id="noteService"  class="com.web.service.NoteService"></bean>
-		
+		<bean  id="wallService"  class="com.web.service.WallService"></bean>
  
 	 
      

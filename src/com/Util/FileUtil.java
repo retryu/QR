@@ -9,12 +9,13 @@ import java.io.InputStream;
  *@date:2012-9-22ÏÂÎç02:53:25
  */
 
-public class FileUtil {
+public  class FileUtil {
 	public  static void InputStream2File(InputStream inputStream,String  file){
 		System.out.println("file:"+file);
 		byte  buff[]=new  byte[1024];
+		FileOutputStream  fileOutputStream = null;
 		try {
-		FileOutputStream  fileOutputStream=new FileOutputStream(file);
+		  fileOutputStream=new FileOutputStream(file);
 			while(inputStream.read(buff)!=-1){
 				fileOutputStream.write(buff);
 			}
@@ -22,6 +23,16 @@ public class FileUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+		
+		try {
+			fileOutputStream.close();
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	
 	}
 
 }

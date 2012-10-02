@@ -25,11 +25,10 @@ public class FileUploadController {
 		 
 	}      
 		@RequestMapping(value="/upload.do",method=RequestMethod.POST)
-		public ModelAndView  handleFormUpload(@RequestParam("name") String name, @RequestParam("file")  MultipartFile  file){
+		public ModelAndView  handleFormUpload(@RequestParam("noteTitle") String noteTitle, @RequestParam("img")  MultipartFile  img){
 			ModelAndView m=new  ModelAndView();
-  
 			if(noteService!=null)
-			noteService.addImgNote(file,30);
+			noteService.addImgNote(img,3);
 			else{
 				m.addObject("msg", "  noteservice  is null");
 				m.setViewName("error");
@@ -40,7 +39,7 @@ public class FileUploadController {
 //		@RequestMapping(value="/addNote.do")
 //		public  void  handleAddNote(@RequestParam("note_content")String  note_content){
 //			
-//			
+//			    
 //		}
 	  
 	

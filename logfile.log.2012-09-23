@@ -1,0 +1,64 @@
+2012-09-23 16:29:02 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2012-09-23 16:29:02 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.1.6.Final}
+2012-09-23 16:29:02 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2012-09-23 16:29:02 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2012-09-23 16:29:02 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2012-09-23 16:29:02 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2012-09-23 16:29:02 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2012-09-23 16:29:02 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2012-09-23 16:29:02 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 1
+2012-09-23 16:29:02 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2012-09-23 16:29:02 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/qr]
+2012-09-23 16:29:02 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2012-09-23 16:29:03 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2012-09-23 16:29:03 INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2012-09-23 16:29:03 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2012-09-23 16:29:03 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: qr.note
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [usl, id, source, longitude, latitude, date]
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: qr.resource
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [content, id, note_id, type]
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: [fkef86282ec4eeaacc]
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [fkef86282ec4eeaacc, primary]
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: qr.user
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [id, email, e_mail, password]
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2012-09-23 16:29:03 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2012-09-23 16:32:13 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+2012-09-23 16:32:13 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.1.6.Final}
+2012-09-23 16:32:13 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2012-09-23 16:32:13 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2012-09-23 16:32:13 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2012-09-23 16:32:13 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2012-09-23 16:32:13 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2012-09-23 16:32:13 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2012-09-23 16:32:13 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 1
+2012-09-23 16:32:13 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2012-09-23 16:32:13 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/qr]
+2012-09-23 16:32:13 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2012-09-23 16:32:14 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2012-09-23 16:32:14 INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2012-09-23 16:32:14 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2012-09-23 16:32:14 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: qr.note
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [usl, id, source, longitude, latitude, date]
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: qr.resource
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [content, id, note_id, type]
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: [fkef86282ec4eeaacc]
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [fkef86282ec4eeaacc, primary]
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: qr.user
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [id, email, e_mail, password]
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2012-09-23 16:32:14 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
